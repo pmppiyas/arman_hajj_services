@@ -57,8 +57,8 @@ const UmraPack = () => {
   ];
 
   return (
-    <section id="packages" className="py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4">
+    <section id="packages" className="bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-12 py-16 md:py-20">
         <div className="text-center mb-12">
           <span className="text-green-600 font-semibold text-sm uppercase tracking-wider">
             উমরাহ
@@ -74,16 +74,22 @@ const UmraPack = () => {
           {UMRAH_PACKAGES.map((pkg) => (
             <div
               key={pkg.name}
-              className={`relative bg-white rounded-2xl overflow-hidden card-hover border-2 ${pkg.border} shadow-md`}
+              className={`
+                relative bg-white rounded-2xl overflow-hidden border-2 ${pkg.border} shadow-md
+                hover:-translate-y-1
+                hover:shadow-xl
+                transition-all
+                duration-300
+              `}
             >
               {pkg.badge && (
                 <div
-                  className={`absolute top-4 right-4 bg-gradient-to-r ${pkg.color} text-white text-xs font-bold px-3 py-1 rounded-full shadow`}
+                  className={`absolute top-4 right-4 bg-linear-to-r ${pkg.color} text-white text-xs font-bold px-3 py-1 rounded-full shadow z-10`}
                 >
                   {pkg.badge}
                 </div>
               )}
-              <div className={`bg-gradient-to-r ${pkg.color} p-6 text-white`}>
+              <div className={`bg-linear-to-r ${pkg.color} p-6 text-white`}>
                 <div className="text-4xl mb-3">{pkg.icon}</div>
                 <h3 className="text-xl font-bold">{pkg.name}</h3>
                 <div className="mt-3">
@@ -98,7 +104,7 @@ const UmraPack = () => {
                       key={f}
                       className="flex items-center gap-3 text-sm text-gray-700"
                     >
-                      <span className="w-5 h-5 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-xs font-bold flex-shrink-0">
+                      <span className="w-5 h-5 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-xs font-bold shrink-0">
                         ✓
                       </span>
                       {f}
@@ -107,7 +113,12 @@ const UmraPack = () => {
                 </ul>
                 <a
                   href="https://wa.me/8801700000000"
-                  className={`mt-6 w-full block text-center bg-gradient-to-r ${pkg.color} text-white font-semibold py-3 rounded-xl hover:opacity-90 transition-all`}
+                  className={`
+                    mt-6 w-full block text-center bg-linear-to-r ${pkg.color}
+                    text-white font-semibold py-3 rounded-xl
+                    hover:opacity-90 hover:scale-[1.02]
+                    transition-all duration-300
+                  `}
                 >
                   বুকিং করুন
                 </a>

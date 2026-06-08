@@ -5,6 +5,7 @@ const HajjPack = () => {
       price: '৫,৮৫,০০০',
       type: 'সরকারি',
       color: 'from-green-600 to-emerald-700',
+      border: 'border-green-200',
       features: [
         'বিমান টিকিট',
         'হজ ভিসা',
@@ -22,6 +23,7 @@ const HajjPack = () => {
       price: '৭,৫০,০০০',
       type: 'বেসরকারি',
       color: 'from-blue-600 to-cyan-700',
+      border: 'border-blue-200',
       features: [
         'বিমান টিকিট',
         'হজ ভিসা',
@@ -37,8 +39,8 @@ const HajjPack = () => {
   ];
 
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4">
+    <section className="bg-white">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-12 py-16 md:py-20">
         <div className="text-center mb-12">
           <span className="text-green-600 font-semibold text-sm uppercase tracking-wider">
             হজ
@@ -50,36 +52,55 @@ const HajjPack = () => {
             সরকারি ও বেসরকারি উভয় হজ প্যাকেজ উপলব্ধ
           </p>
         </div>
+
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {HAJJ_PACKAGES.map((pkg) => (
             <div
               key={pkg.name}
-              className="bg-white rounded-2xl overflow-hidden shadow-lg card-hover border border-gray-100"
+              className={`
+                bg-white rounded-2xl overflow-hidden shadow-lg border-2 ${pkg.border}
+                hover:-translate-y-1
+                hover:shadow-xl
+                transition-all
+                duration-300
+              `}
             >
-              <div className={`bg-gradient-to-r ${pkg.color} p-8 text-white`}>
+              {/* Header */}
+              <div className={`bg-linear-to-r ${pkg.color} p-8 text-white`}>
                 <div className="inline-block bg-white/20 text-white text-xs font-semibold px-3 py-1 rounded-full mb-4">
                   {pkg.type}
                 </div>
+
                 <h3 className="text-2xl font-bold">{pkg.name}</h3>
+
                 <div className="mt-4">
                   <span className="text-4xl font-bold">৳{pkg.price}</span>
                   <span className="text-white/70 ml-1">/জন</span>
                 </div>
               </div>
+
+              {/* Body */}
               <div className="p-6">
                 <div className="grid grid-cols-2 gap-2">
                   {pkg.features.map((f) => (
                     <div
                       key={f}
-                      className="flex items-center gap-2 text-sm text-gray-700 py-1"
+                      className="flex items-center gap-2 text-sm text-gray-700 py-1 hover:text-gray-900 transition-colors duration-200"
                     >
-                      <span className="text-green-500 font-bold">✓</span> {f}
+                      <span className="text-green-500 font-bold">✓</span>
+                      {f}
                     </div>
                   ))}
                 </div>
+
                 <a
                   href="https://wa.me/8801700000000"
-                  className={`mt-6 w-full block text-center bg-gradient-to-r ${pkg.color} text-white font-semibold py-3 rounded-xl hover:opacity-90 transition-all`}
+                  className={`
+                    mt-6 w-full block text-center bg-linear-to-r ${pkg.color}
+                    text-white font-semibold py-3 rounded-xl
+                    hover:opacity-90 hover:scale-[1.02]
+                    transition-all duration-300
+                  `}
                 >
                   বিস্তারিত জানুন
                 </a>

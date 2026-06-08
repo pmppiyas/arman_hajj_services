@@ -19,8 +19,8 @@ const BookingForm = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-900 to-green-900 text-white">
-      <div className="max-w-7xl mx-auto px-4">
+    <section className=" bg-linear-to-br from-gray-900 to-green-900 text-white">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-12 py-16 md:py-20">
         <div className="grid md:grid-cols-2 gap-12 items-start">
           {/* Contact Info */}
           <div>

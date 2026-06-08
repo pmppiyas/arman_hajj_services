@@ -1,20 +1,13 @@
+import Logo from '@/components/custom/shared/Logo';
 import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-950 text-white py-12">
-      <div className="max-w-7xl mx-auto px-4">
+    <footer className="bg-gray-950 text-white ">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-12 py-16 md:py-20">
         <div className="grid md:grid-cols-3 gap-8 pb-8 border-b border-gray-800">
-          <div>
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-green-600 to-teal-700 flex items-center justify-center text-white font-bold">
-                আ
-              </div>
-              <div>
-                <div className="font-bold">আরমান আবির হজ সার্ভিস</div>
-                <div className="text-green-400 text-xs">লাইসেন্স নং: ১৪৬৭</div>
-              </div>
-            </div>
+          <div className="space-y-4">
+            <Logo />
             <p className="text-gray-400 text-sm leading-relaxed">
               বিশ্বস্ততার সাথে পবিত্র হজ ও উমরাহ সম্পাদনে আমরা আপনার নির্ভরযোগ্য
               সঙ্গী।
@@ -33,7 +26,7 @@ const Footer = () => {
                 <a
                   key={link}
                   href="#"
-                  className="block text-gray-400 hover:text-white text-sm transition-colors"
+                  className="block text-gray-400 hover:text-white text-sm transition-colors w-max"
                 >
                   {link}
                 </a>
