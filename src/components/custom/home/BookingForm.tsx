@@ -2,10 +2,20 @@
 
 import { useState } from 'react';
 
+type BookingFormData = {
+  name: string;
+  phone: string;
+  passport: string;
+  package: string;
+  date: string;
+  note: string;
+};
+
 const BookingForm = () => {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<BookingFormData>({
     name: '',
     phone: '',
+    passport: '',
     package: '',
     date: '',
     note: '',
@@ -17,6 +27,12 @@ const BookingForm = () => {
       setSubmitted(true);
     }
   };
+
+  const inputFields: Array<[string, keyof BookingFormData, string, string]> = [
+    ['text', 'name', 'আপনার নাম *', 'পূর্ণ নাম লিখুন'],
+    ['tel', 'phone', 'মোবাইল নম্বর *', '০১XXXXXXXXX'],
+    ['text', 'passport', 'পাসপোর্ট নম্বর (ঐচ্ছিক)', 'AB1234567'],
+  ];
 
   return (
     <section className=" bg-linear-to-br from-gray-900 to-green-900 text-white">
@@ -81,11 +97,7 @@ const BookingForm = () => {
               </div>
             ) : (
               <div className="space-y-4">
-                {[
-                  ['text', 'name', 'আপনার নাম *', 'পূর্ণ নাম লিখুন'],
-                  ['tel', 'phone', 'মোবাইল নম্বর *', '০১XXXXXXXXX'],
-                  ['text', 'passport', 'পাসপোর্ট নম্বর (ঐচ্ছিক)', 'AB1234567'],
-                ].map(([type, key, label, placeholder]) => (
+                {inputFields.map(([type, key, label, placeholder]) => (
                   <div key={key}>
                     <label className="block text-sm font-semibold text-gray-700 mb-1">
                       {label}
@@ -149,7 +161,7 @@ const BookingForm = () => {
                 </div>
                 <button
                   onClick={handleSubmit}
-                  className="w-full bg-gradient-to-r from-green-600 to-teal-600 hover:from-green-700 hover:to-teal-700 text-white font-bold py-4 rounded-xl transition-all hover:scale-[1.01] shadow-lg text-sm"
+                  className="w-full bg-linear-to-r from-green-600 to-teal-600 hover:from-green-700 hover:to-teal-700 text-white font-bold py-4 rounded-xl transition-all hover:scale-[1.01] shadow-lg text-sm"
                 >
                   বুকিং সাবমিট করুন →
                 </button>
