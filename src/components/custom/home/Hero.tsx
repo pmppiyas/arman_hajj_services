@@ -1,3 +1,6 @@
+import { assets } from '@/assets/assets';
+import Image from 'next/image';
+
 const Hero = () => {
   return (
     <section
@@ -23,40 +26,52 @@ const Hero = () => {
       </div>
 
       <div className="max-w-7xl mx-auto   relative">
-        <div className="max-w-3xl animate-fade-in">
-          <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white text-xs font-semibold px-4 py-2 rounded-full mb-6 border border-white/30">
-            <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
-            সরকার অনুমোদিত · লাইসেন্স নং: ১৪৬৭
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="max-w-3xl animate-fade-in">
+            <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white text-xs font-semibold px-4 py-2 rounded-full mb-6 border border-white/30">
+              <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
+              সরকার অনুমোদিত · লাইসেন্স নং: ১৪৬৭
+            </div>
+
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 leading-tight">
+              আরমান আবির
+              <br />
+              <span className="text-accent">হজ সার্ভিস</span>
+            </h1>
+
+            <p className="text-white/80 text-lg md:text-xl mb-8 leading-relaxed">
+              বিশ্বস্ততার সাথে পবিত্র হজ ও উমরাহ সম্পাদনে আমরা আপনার পাশে।
+              গাইবান্ধা থেকে মক্কা-মদিনা পর্যন্ত সম্পূর্ণ সেবা।
+            </p>
+
+            <div className="flex flex-wrap gap-4">
+              <a
+                href="#packages"
+                className="bg-accent text-accent-foreground hover:opacity-90 font-bold px-8 py-4 rounded-xl transition-all hover:scale-105 shadow-lg"
+              >
+                এখনই বুকিং করুন
+              </a>
+
+              <a
+                href="tel:+8801700000000"
+                className="bg-white/20 hover:bg-white/30 text-white font-semibold px-8 py-4 rounded-xl border border-white/40 transition-all flex items-center gap-2"
+              >
+                <svg viewBox="0 0 24 24" className="w-5 h-5 fill-white">
+                  <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+                </svg>
+                কল করুন
+              </a>
+            </div>
           </div>
 
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 leading-tight">
-            আরমান আবির
-            <br />
-            <span className="text-accent">হজ সার্ভিস</span>
-          </h1>
-
-          <p className="text-white/80 text-lg md:text-xl mb-8 leading-relaxed">
-            বিশ্বস্ততার সাথে পবিত্র হজ ও উমরাহ সম্পাদনে আমরা আপনার পাশে।
-            গাইবান্ধা থেকে মক্কা-মদিনা পর্যন্ত সম্পূর্ণ সেবা।
-          </p>
-
-          <div className="flex flex-wrap gap-4">
-            <a
-              href="#packages"
-              className="bg-accent text-accent-foreground hover:opacity-90 font-bold px-8 py-4 rounded-xl transition-all hover:scale-105 shadow-lg"
-            >
-              এখনই বুকিং করুন
-            </a>
-
-            <a
-              href="tel:+8801700000000"
-              className="bg-white/20 hover:bg-white/30 text-white font-semibold px-8 py-4 rounded-xl border border-white/40 transition-all flex items-center gap-2"
-            >
-              <svg viewBox="0 0 24 24" className="w-5 h-5 fill-white">
-                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
-              </svg>
-              কল করুন
-            </a>
+          <div className="flex justify-center lg:justify-end">
+            <Image
+              src={assets.kaba2}
+              alt="Kaba"
+              width={600}
+              height={400}
+              className="w-full max-w-150 h-auto rounded-2xl shadow-lg animate-fade-in-up overflow-hidden"
+            />
           </div>
         </div>
 

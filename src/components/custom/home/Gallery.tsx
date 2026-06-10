@@ -13,7 +13,7 @@ const Gallery = () => {
   const GALLERY_IMAGES: IGallaryImage[] = [
     {
       id: 1,
-      src: 'https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=600',
+      src: 'https://i.ibb.co.com/rKYvGYYP/pexels-fahadputhawala-34981839-1.jpg',
       title: 'কাবা শরীফ',
       category: 'makkah',
       description: 'পবিত্র কাবা শরীফের অত্যাশ্চর্য দৃশ্য',
@@ -22,7 +22,7 @@ const Gallery = () => {
     },
     {
       id: 2,
-      src: 'https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=600',
+      src: 'https://i.ibb.co.com/9k9Z1d4s/pexels-rushdi-fatani-782816372-19042358.jpg',
       title: 'মসজিদে নববী',
       category: 'madinah',
       description: 'মদিনার মসজিদে নববীর সবুজ গম্বুজ',
@@ -31,7 +31,7 @@ const Gallery = () => {
     },
     {
       id: 3,
-      src: 'https://images.unsplash.com/photo-1596478004251-bd9e21507e5c?w=600',
+      src: 'https://i.ibb.co.com/BKK8jLPf/pexels-shameer-vayalakkad-hydrose-2602409-20681716.jpg',
       title: 'হজ্জযাত্রী',
       category: 'hajj',
       description: 'হজ্জের সময় আরাফাতের ময়দান',
@@ -40,7 +40,7 @@ const Gallery = () => {
     },
     {
       id: 4,
-      src: 'https://images.unsplash.com/photo-1562926984-1a938b93b4d1?w=600',
+      src: 'https://i.ibb.co.com/NnCQPxxd/pexels-drmkhawarnazir-18996588.jpg',
       title: 'উমরাহ পালন',
       category: 'umrah',
       description: 'তাওয়াফরত অবস্থায় পুণ্যার্থী',
@@ -49,7 +49,7 @@ const Gallery = () => {
     },
     {
       id: 5,
-      src: 'https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=600',
+      src: 'https://i.ibb.co.com/RXHcHWY/zamzam-water-20240510-151913668.jpg',
       title: 'জমজম কূপ',
       category: 'makkah',
       description: 'পবিত্র জমজমের পানি',
@@ -58,7 +58,7 @@ const Gallery = () => {
     },
     {
       id: 6,
-      src: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=600',
+      src: 'https://i.ibb.co.com/YFZGfmwy/mosquee-de-quba.jpg',
       title: 'মসজিদে কুবা',
       category: 'madinah',
       description: 'মদিনার প্রথম মসজিদ',
@@ -67,7 +67,7 @@ const Gallery = () => {
     },
     {
       id: 7,
-      src: 'https://images.unsplash.com/photo-1591382386627-349b692688ff?w=600',
+      src: 'https://i.ibb.co.com/8D0F2Tsb/pexels-mohamed-hamdi-510308652-30698843.jpg',
       title: 'সাফা-মারওয়া',
       category: 'umrah',
       description: 'সাফা ও মারওয়া পাহাড়ের মাঝে সাঈ',
@@ -76,7 +76,7 @@ const Gallery = () => {
     },
     {
       id: 8,
-      src: 'https://images.unsplash.com/photo-1586208224649-8078f3d76d78?w=600',
+      src: 'https://i.ibb.co.com/5WpMJQ2t/pexels-yasirgurbuz-12765598-2.jpg',
       title: 'আরাফাতের ময়দান',
       category: 'hajj',
       description: 'হজ্জের প্রধান স্থান আরাফাত',

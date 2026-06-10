@@ -1,4 +1,5 @@
 import BookingForm from '@/components/custom/home/BookingForm';
+import FAQ from '@/components/custom/home/FAQ';
 import Gallery from '@/components/custom/home/Gallery';
 import HajjPack from '@/components/custom/home/HajjPack';
 import Hero from '@/components/custom/home/Hero';
@@ -16,6 +17,7 @@ export default function Home() {
       <HajjPack />
       <Gallery />
       <WhyWe />
+      <FAQ />
       <BookingForm />
       <FloatingButtons />
     </div>

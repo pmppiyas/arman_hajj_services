@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 
 const FAQ = () => {
-  const [faqOpen, setFaqOpen] = useState(null);
+  const [faqOpen, setFaqOpen] = useState<number | null>(null);
   const FAQS = [
     {
       q: 'উমরাহ ভিসা কত দিনে পাওয়া যায়?',
